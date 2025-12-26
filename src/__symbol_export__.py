@@ -133,8 +133,8 @@ def register_export_package():
     module = sys.modules[module_name]
     if not (bool(module.__package__) and hasattr(module, '__path__')):
         raise RuntimeError(
-            f'This module can only be imported from a package \'__init__.py\' '
-            f'to define the public interface of submodules of that package.'
+            'This module can only be imported from a package \'__init__.py\' '
+            'to define the public interface of submodules of that package.'
         )
     if module_name == '__main__':
         return
