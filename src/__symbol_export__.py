@@ -100,8 +100,8 @@ def build_capsule(module: types.ModuleType):
             logger.info('build capsule for %r', module_name)
             exported_module = types.ModuleType(module_name, module.__doc__)
             exported_vars = vars(exported_module)
-            if hasattr(module, "__all__"):
-                exported_vars["__all__"] = public_symbols(module)
+            if hasattr(module, '__all__'):
+                exported_vars['__all__'] = public_symbols(module)
             for symbol in COPY_SYMBOL_NAMES:
                 if not hasattr(module, symbol):
                     continue
@@ -117,15 +117,15 @@ def build_capsule(module: types.ModuleType):
 
 
 def imported_from():
-    frame = sys._getframe(1)  # type: ignore[reportPrivateUsage]
+    frame = sys._getframe(1)
     while frame:
         co_name = frame.f_code.co_name
         co_filename = frame.f_code.co_filename
-        if co_name != "<module>" or co_filename == __file__:
+        if co_name != '<module>' or co_filename == __file__:
             frame = frame.f_back
             continue
-        return frame.f_globals["__name__"]
-    raise RuntimeError("The origin of the import cannot be found.")
+        return frame.f_globals['__name__']
+    raise RuntimeError('The origin of the import cannot be found.')
 
 
 def register_export_package():
@@ -133,19 +133,19 @@ def register_export_package():
     module = sys.modules[module_name]
     if not (bool(module.__package__) and hasattr(module, '__path__')):
         raise RuntimeError(
-            f"This module can only be imported from a package '__init__.py' "
-            f"to define the public interface of submodules of that package."
+            f'This module can only be imported from a package \'__init__.py\' '
+            f'to define the public interface of submodules of that package.'
         )
     if module_name == '__main__':
         return
     exported_packages.add(module_name)
-    logger.debug("registered package %r", module_name)
+    logger.debug('registered package %r', module_name)
 
 
-if __name__ != "__main__":
+if __name__ != '__main__':
     exported_packages.add(imported_from())
     build_capsule(sys.modules[__name__])
     register_export_package()
-    logger.debug("end import %r", __name__)
+    logger.debug('end import %r', __name__)
 
 builtins.__import__ = import_module

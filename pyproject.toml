@@ -1,6 +1,6 @@
 [project]
 name = "symbol-export"
-description = "Python module encapsulation toolkit - Enforce public/private boundaries at import time"
+description = "Python package module encapsulation toolkit - Enforce public/private symbols at import time"
 readme = "README.md"
 authors = [
     { name = "AlanBogarin", email = "bogarin01alan@email.com" },
