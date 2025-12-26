@@ -24,11 +24,11 @@ requires-python = ">=3.10"
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/AlanBogarin/python-encapsulation"
-Documentation = "https://github.com/AlanBogarin/python-encapsulation/wiki"
-Repository = "https://github.com/AlanBogarin/python-encapsulation"
-Issues = "https://github.com/AlanBogarin/python-encapsulation/issues"
-Changelog = "https://github.com/AlanBogarin/python-encapsulation/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/AlanBogarin/symbol-export"
+Documentation = "https://github.com/AlanBogarin/symbol-export/wiki"
+Repository = "https://github.com/AlanBogarin/symbol-export"
+Issues = "https://github.com/AlanBogarin/symbol-export/issues"
+Changelog = "https://github.com/AlanBogarin/symbol-export/blob/main/CHANGELOG.md"
 
 [build-system]
 requires = ["setuptools>=65.0", "wheel"]
