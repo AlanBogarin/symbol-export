@@ -6,7 +6,7 @@ import types
 
 __all__ = ('__version__',)
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 COPY_SYMBOL_NAMES = (
     '__builtins__',

@@ -1,6 +1,6 @@
 [project]
 name = "symbol-export"
-version = "1.0.0"
+version = "1.0.1"
 description = "Python package module encapsulation toolkit - Enforce public/private symbols at import time"
 readme = "README.md"
 authors = [
@@ -25,10 +25,8 @@ dependencies = []
 
 [project.urls]
 Homepage = "https://github.com/AlanBogarin/symbol-export"
-Documentation = "https://github.com/AlanBogarin/symbol-export/wiki"
 Repository = "https://github.com/AlanBogarin/symbol-export"
 Issues = "https://github.com/AlanBogarin/symbol-export/issues"
-Changelog = "https://github.com/AlanBogarin/symbol-export/blob/main/CHANGELOG.md"
 
 [build-system]
 requires = ["setuptools>=65.0", "wheel"]
