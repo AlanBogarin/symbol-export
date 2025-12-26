@@ -32,7 +32,7 @@ classifiers = [
     "Topic :: Software Development :: Quality Assurance",
     "Typing :: Typed"
 ]
-requires-python = ">=3.0"
+requires-python = ">=3.10"
 dependencies = []
 
 [project.urls]
