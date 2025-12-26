@@ -1,2 +1,2 @@
-# python-encapsulation
-Python module encapsulation toolkit - Enforce public/private boundaries at import time
+# symbol-export
+Python package module encapsulation toolkit - Enforce public/private symbols at import time
